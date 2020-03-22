@@ -1,10 +1,14 @@
 version: 2.1
 
-orbs:
-  maven: circleci/maven@1.0.0
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk11
 
-workflows:
-  maven_test:
-    jobs:
-      - maven/test
-          command: install
+    environment:
+      JVM_OPTS: -Xms512m -Xmx1200m
+      TERM: dumb
+
+    steps:
+      - checkout
+      - run: ./mvnw clean install
