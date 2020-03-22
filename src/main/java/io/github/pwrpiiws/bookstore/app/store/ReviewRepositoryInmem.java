@@ -39,6 +39,30 @@ public class ReviewRepositoryInmem implements ReviewRepository {
 
     @Override
     public Mono<Review> save(Mono<Review> review) {
-        return null;
+        Objects.requireNonNull(review);
+        return review.map(this::save);
     }
+
+    private Review save(final Review input) {
+        if (input.getId() == null) {
+            Review newReview = new Review(
+                    UUID.randomUUID(),
+                    input.getBook(),
+                    input.getAuthor(),
+                    input.getRate(),
+                    input.getTitle(),
+                    input.getContent());
+            reviews.put(newReview.getId(), newReview);
+            return newReview;
+        } else {
+            return reviews.compute(input.getId(), (uuid, review) -> {
+                if (review != null) {
+                    return input;
+                } else {
+                    throw new IllegalArgumentException("Review with ID=" + input.getId() + " does not exist");
+                }
+            });
+        }
+    }
+
 }

@@ -54,11 +54,13 @@ public class BookRepositoryInmem implements BookRepository {
             books.put(newBook.getId(), newBook);
             return newBook;
         } else {
-            if (books.containsKey(input.getId())) {
-                return books.put(input.getId(), input);
-            } else {
-                throw new IllegalArgumentException("Book with ID=" + input.getId() + " does not exist");
-            }
+            return books.compute(input.getId(), (uuid, book) -> {
+                if (book != null) {
+                    return input;
+                } else {
+                    throw new IllegalArgumentException("Book with ID=" + input.getId() + " does not exist");
+                }
+            });
         }
     }
 

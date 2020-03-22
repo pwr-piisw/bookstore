@@ -17,7 +17,7 @@ public class Routes {
                 .DELETE("books/{bookId}", bookHandler::delete)
                 .GET("reviews/{reviewId}", reviewHandler::findById)
                 .GET("books/{bookId}/reviews", reviewHandler::findAllReviewsForBook)
-                .POST("books/{bookId}/reviews", reviewHandler::save)
+                .POST("reviews", reviewHandler::save)
                 .build();
     }
 }
