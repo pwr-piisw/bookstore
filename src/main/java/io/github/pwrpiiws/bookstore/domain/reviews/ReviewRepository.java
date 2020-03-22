@@ -30,9 +30,9 @@ import reactor.core.publisher.Mono;
 
 public interface ReviewRepository {
 
-    Flux<Review> findReviewsForBook(UUID bookId);
+  Flux<Review> findReviewsForBook(UUID bookId);
 
-    Mono<Review> findById(UUID reviewId);
+  Mono<Review> findById(UUID reviewId);
 
-    Mono<Review> save(Mono<Review> review);
+  Mono<Review> save(Mono<Review> review);
 }

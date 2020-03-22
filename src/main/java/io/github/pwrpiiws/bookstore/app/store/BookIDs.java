@@ -29,8 +29,9 @@ import lombok.Getter;
 
 @Getter
 public enum BookIDs {
+  FIASCO,
+  UBIK,
+  A2001;
 
-    FIASCO, UBIK, A2001;
-
-    private UUID id = UUID.randomUUID();
+  private UUID id = UUID.randomUUID();
 }

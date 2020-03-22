@@ -29,8 +29,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class Lista52020ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
+  @Test
+  void contextLoads() {}
 }

@@ -63,6 +63,14 @@
 						<licenseHeader>
 							<file>${basedir}/LICENSE</file>
 						</licenseHeader>
+						<googleJavaFormat>
+							<version>1.7</version>
+							<style>GOOGLE</style>
+						</googleJavaFormat>
+						<removeUnusedImports/>
+						<importOrder>
+							<order>io.github.pwrpiiws,java,javax,org,com,reactor,lombok</order>
+						</importOrder>
 					</java>
 				</configuration>
 			</plugin>

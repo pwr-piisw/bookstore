@@ -30,11 +30,11 @@ import reactor.core.publisher.Mono;
 
 public interface BookRepository {
 
-    Flux<Book> findAllBooks();
+  Flux<Book> findAllBooks();
 
-    Mono<Book> findById(UUID id);
+  Mono<Book> findById(UUID id);
 
-    Mono<Book> save(Mono<Book> book);
+  Mono<Book> save(Mono<Book> book);
 
-    Mono<Book> delete(Mono<Book> book);
+  Mono<Book> delete(Mono<Book> book);
 }
