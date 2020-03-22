@@ -1,4 +1,5 @@
 # Repozytorium startowe dla listy nr 5/2020
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CircleCI](https://circleci.com/gh/pwr-piisw/lista5_2020.svg?style=svg)](https://circleci.com/gh/pwr-piisw/lista5_2020)
 
 ## Jak używać?
