@@ -12,11 +12,11 @@ spowoduje całkowite zbudowanie projektu oraz jego instalacja w lokalnym repozyt
 ### Spring boot
 Uruchomienie aplikacji można zrobić z poziomu IDE (klasa `BookstoreApplication`) lub z poziomiu CLI:
 ```bash
-mvnw spring-boot:run
+mvnw spring-boot:run -pl backend
 ```
 Więcej informacji na temat tego co oferuje plugin SpringBoot dla Mavena można uzyskać w ten sposób:
 ```bash
-mvnw help:describe -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
+mvnw help:describe -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin -pl backend
 ```
 
 ### Spotless
