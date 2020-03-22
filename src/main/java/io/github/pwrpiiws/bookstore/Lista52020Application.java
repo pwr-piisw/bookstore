@@ -1,4 +1,4 @@
-package io.github.pwrpiiws.lista5_2020;
+package io.github.pwrpiiws.bookstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

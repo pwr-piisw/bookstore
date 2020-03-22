@@ -1,4 +1,4 @@
-package io.github.pwrpiiws.lista5_2020;
+package io.github.pwrpiiws.bookstore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
