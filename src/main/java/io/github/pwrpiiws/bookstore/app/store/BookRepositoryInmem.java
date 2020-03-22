@@ -19,9 +19,9 @@ public class BookRepositoryInmem implements BookRepository {
     public BookRepositoryInmem() {
         books = new ConcurrentHashMap<>();
         List<Book> create = new ArrayList<>();
-        create.add(new Book(UUID.randomUUID(), "Fiasco", "Stanislaw Lem"));
-        create.add(new Book(UUID.randomUUID(), "Ubik", "Phillip K. Dick"));
-        create.add(new Book(UUID.randomUUID(), "2001: A Space Odyssey", "Arthur C. Clarke"));
+        create.add(new Book(BookIDs.FIASCO.getId(), "Fiasco", "Stanislaw Lem"));
+        create.add(new Book(BookIDs.UBIK.getId(), "Ubik", "Phillip K. Dick"));
+        create.add(new Book(BookIDs.A2001.getId(), "2001: A Space Odyssey", "Arthur C. Clarke"));
         create.forEach(book -> books.put(book.getId(), book));
     }
 
