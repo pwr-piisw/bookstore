@@ -6,7 +6,6 @@
         <groupId>io.github.pwr-piiws</groupId>
         <artifactId>bookstore</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath /> <!-- lookup parent from repository -->
     </parent>
     <artifactId>bookstore-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
