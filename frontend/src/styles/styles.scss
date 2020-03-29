@@ -1,0 +1,33 @@
+@import "variables";
+
+header {
+  background-color: $background-color-1;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+  padding: 0.5em;
+}
+
+nav {
+  background-color: $background-color-2;
+  color: white;
+  padding: 0.3em $side-margin;
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+section.page {
+  padding: 0.5em $side-margin;
+}
+
+div.bs-data-panel {
+  border-radius: 0.7em;
+  padding: 0.5em;
+  background-color: $background-color-content-1;
+  box-shadow: $shadow-size $shadow-size $shadow-color;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}

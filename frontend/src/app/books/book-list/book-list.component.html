@@ -1,0 +1,6 @@
+<section class="page">
+  <h1>Books</h1>
+  <app-book-panel *ngFor="let book of books" [book]="book">
+  </app-book-panel>
+  <p *ngIf="!books || books.length === 0">No books found</p>
+</section>
