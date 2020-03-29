@@ -96,3 +96,46 @@ w przypadku tworzenia nowej recenzji (bez `id`), lub
 ```
 w przypadku aktualizacji istniejącej recenzji (z `id`).
 
+## Frontend
+Kod frontendu dostępny jest w module `frontend` i jest napisany w Angular 9. Praca z frontendem możliwa jest w całości przy użyciu Mavena, ale wygodniej będzie zainstalować kilka dodatkowych narzędzi.
+
+### Instalacja narzędzi
+Do wygodnej pracy niezbędny jest `nodeJS` w wersji 12.16.x. Do zarządzania wersjam środowiska `nodeJS` dobrze jest użyć `nvm`:
+
+https://github.com/coreybutler/nvm-windows/releases
+
+Po zainstalowaniu `nvm` dostępna jest komenda CLI, przy pomocy której możemy zainstalować odpowiednią wersję `nodeJS`:
+
+```
+nvm list available
+nvm install 12.16.1
+nvm use 12.16.1
+```
+
+Po zainstalowaniu środowiska `nodeJS` dostępne będzie także narzędzie `npm`, którego użyjemy do zainstalowania Angular CLI:
+
+```
+npm install -g @angular/cli
+```
+
+### Uruchomienie frontendu w trybie develperskim
+Tryb developerski pozwala na szybką aktualizację kodu frondendu w celu natychmiastowej weryfikacji napisanego kodu. W celu skorzystania z tego trybu pracy należy najpierw uruchomić backend przy użyciu np. IDE lub z poziomu linii poleceń:
+```
+mvnw spring-boot:run -pl backend
+```
+
+Następnie należy z poziomu linii poleceń wejść do katalogu `frontend` i uruchomić komendę:
+```
+ng serve
+```
+
+Frontend w trybie developerskim dostępny będzie pod adresem: http:\\localhost:4200
+
+### Uruchomienie frontendu w trybie produkcyjnym
+Frontend w trybie produkcyjnym może być uruchomiony z poziomu linii poleceń:
+```
+mvnw install
+mvnw spring-boot:run -pl backend
+```
+
+W tym trybie frontend dostępny będzie pod adresem: http:\\localhost:8080\ui
