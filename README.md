@@ -100,7 +100,7 @@ w przypadku aktualizacji istniejącej recenzji (z `id`).
 Kod frontendu dostępny jest w module `frontend` i jest napisany w Angular 9. Praca z frontendem możliwa jest w całości przy użyciu Mavena, ale wygodniej będzie zainstalować kilka dodatkowych narzędzi.
 
 ### Instalacja narzędzi
-Do wygodnej pracy niezbędny jest `nodeJS` w wersji 12.16.x. Do zarządzania wersjam środowiska `nodeJS` dobrze jest użyć `nvm`:
+Do pracy w trybie developerskim niezbędny jest `nodeJS` w wersji 12.16.x. Do zarządzania wersjam środowiska `nodeJS` dobrze jest użyć `nvm`:
 
 https://github.com/coreybutler/nvm-windows/releases
 
@@ -119,7 +119,7 @@ npm install -g @angular/cli
 ```
 
 ### Uruchomienie frontendu w trybie develperskim
-Tryb developerski pozwala na szybką aktualizację kodu frondendu w celu natychmiastowej weryfikacji napisanego kodu. W celu skorzystania z tego trybu pracy należy najpierw uruchomić backend przy użyciu np. IDE lub z poziomu linii poleceń:
+Tryb developerski pozwala na szybki restart frondendu w celu natychmiastowej weryfikacji napisanego kodu. W celu skorzystania z tego trybu pracy należy najpierw uruchomić backend przy użyciu np. IDE lub z poziomu linii poleceń:
 ```
 mvnw spring-boot:run -pl backend
 ```
