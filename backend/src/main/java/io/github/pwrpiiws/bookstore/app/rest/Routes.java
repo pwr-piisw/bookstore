@@ -23,9 +23,12 @@
  */
 package io.github.pwrpiiws.bookstore.app.rest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -34,7 +37,9 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 public class Routes {
   @Bean
   public RouterFunction<ServerResponse> routerFunction(
-      final BookHandler bookHandler, final ReviewHandler reviewHandler) {
+      final BookHandler bookHandler,
+      final ReviewHandler reviewHandler,
+      @Value("classpath:/static/frontend/index.html") final Resource indexHtml) {
     return RouterFunctions.route()
         .GET("/api/books", bookHandler::findAllBooks)
         .GET("/api/books/{bookId}", bookHandler::findBookById)
@@ -43,7 +48,12 @@ public class Routes {
         .GET("/api/reviews/{reviewId}", reviewHandler::findById)
         .GET("/api/books/{bookId}/reviews", reviewHandler::findAllReviewsForBook)
         .POST("/api/reviews", reviewHandler::save)
-        .resources("/ui/**", new ClassPathResource("static/frontend/"))
+        .resources("/ui/*.js", new ClassPathResource("static/frontend/"))
+        .resources("/ui/*.css", new ClassPathResource("static/frontend/"))
+        .resources("/ui/index.html", new ClassPathResource("static/frontend/"))
+        .GET(
+            "/ui/**",
+            request -> ServerResponse.ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml))
         .build();
   }
 }
