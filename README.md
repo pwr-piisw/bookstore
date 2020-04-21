@@ -36,13 +36,13 @@ W projekcie dostępne jest rozszerzenie Javy pt. Lombok. Lombok działa automaty
 Backend zaimplentowano w Javie z użyciem modułu Spring WebFlux - jest to reaktywna biblioteka web servera. Poniżej opisano zaimplementowane endpointy. W przypadku uruchomienia backendu na lokalnym komputerze dostęp do endpointów możliwy jest za pomocą przeglądarki internetowej (np. `http://localhost:8080/books` zwraca listę książek w formacie JSON). Zaleca się stosowanie specjalistycznych narzędzi do pracy z endpointami (np. PostMan).
 
 ### Find all books
-`GET /books` - zwraca listę wszystkich książek dostępnych w systemie
+`GET /api/books` - zwraca listę wszystkich książek dostępnych w systemie
 
 ### Find book by id        
-`GET /books/{bookId}` - zwraca szczegóły książki o zadanym ID
+`GET /api/books/{bookId}` - zwraca szczegóły książki o zadanym ID
 
 ### Insert or update book
-`POST /books` - dodaje nową książkę lub aktualizuje istniejącą
+`POST /api/books` - dodaje nową książkę lub aktualizuje istniejącą
 
 W treści żądania należy przekazać obiekt JSON opisujący książkę, tj
 ```json
@@ -62,16 +62,16 @@ w przypadku tworzenia nowej książki (bez `id`), lub
 w przypadku aktualizacji istniejącej książki (z `id`).
         
 ### Delete book        
-`DELETE /books/{bookId}` - usuwa istniejącą książkę na podstawie ID
+`DELETE /api/books/{bookId}` - usuwa istniejącą książkę na podstawie ID
         
 ### Find review by id        
-`GET /reviews/{reviewId}` - zwraca recenzję o zadanym ID
+`GET /api/reviews/{reviewId}` - zwraca recenzję o zadanym ID
         
 ### Find all reviews for a book        
-`GET /books/{bookId}/reviews` - zwraca wszystkie recenzje dla książki o zadanym ID
+`GET /api/books/{bookId}/reviews` - zwraca wszystkie recenzje dla książki o zadanym ID
         
 ### Create or update a review        
-`POST /reviews` - tworzy lub aktualizuje recenzję
+`POST /api/reviews` - tworzy lub aktualizuje recenzję
 
 W treści żądania należy przekazać obiekt JSON opisujący recenzję, tj
 ```json
