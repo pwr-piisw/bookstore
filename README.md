@@ -33,7 +33,7 @@ mvnw spotless:check
 W projekcie dostępne jest rozszerzenie Javy pt. Lombok. Lombok działa automatycznie w trakcie buildu, konieczne jest jednak włączenie odpowiedniego plugina na poziomie IDE (np. w IntelliJ należy zainstalować i aktywować plugin oraz włączyć opcję "enable annotation processing" w zakładce Compiler ustawień).
 
 ## Backend
-Backend zaimplentowano w Javie z użyciem modułu Spring WebFlux - jest to reaktywna biblioteka web servera. Poniżej opisano zaimplementowane endpointy. W przypadku uruchomienia backendu na lokalnym komputerze dostęp do endpointów możliwy jest za pomocą przeglądarki internetowej (np. `http://localhost:8080/books` zwraca listę książek w formacie JSON). Zaleca się stosowanie specjalistycznych narzędzi do pracy z endpointami (np. PostMan).
+Backend zaimplentowano w Javie z użyciem modułu Spring WebFlux - jest to reaktywna biblioteka web servera. Poniżej opisano zaimplementowane endpointy. W przypadku uruchomienia backendu na lokalnym komputerze dostęp do endpointów możliwy jest za pomocą przeglądarki internetowej (np. `http://localhost:8081/books` zwraca listę książek w formacie JSON). Zaleca się stosowanie specjalistycznych narzędzi do pracy z endpointami (np. PostMan).
 
 ### Find all books
 `GET /api/books` - zwraca listę wszystkich książek dostępnych w systemie
